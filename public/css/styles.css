@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&display=swap');
+
+:root{
+    --main-heading-size : 6rem;
+    --second-heading-size : 1.5rem;
+    --normal-text-size: 1rem;
+    --gradient-color: #4F00FF, #287BFF, #00F6FF;
+    --gradient-first-color: #4F00FF;
+    --gradient-second-color: #287BFF;
+    --gradient-third-color: #00F6FF;
+    --button-color: #E3428B;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(var(--gradient-color));
+}
+
+
+.main__container{
+    margin: 5rem;
+    text-align: center;
+}
+
+.main__header p{
+    font-size: var(--main-heading-size);
+    font-family: "angkor", serif;
+    color: white;
+}
+
+
+.main__text p{
+    font-size: var(--second-heading-size);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 1rem;
+}
+
+form{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.main__input{
+    padding-block: 2rem;
+}
+
+.text__wrapper{
+  display: flex;
+  height: 48px;
+  width: 447px;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.text__wrapper input[type=text], .text__wrapper input[type=text]:focus {
+    margin: 0.8rem;
+    width: 100vw;
+    border-style: none;
+    outline: none;
+    font-size: var(--normal-text-size);
+}
+
+input[type=submit]{
+    font-size: var(--normal-text-size);
+    padding: 1rem;
+    border-radius: 30px;
+    border-style: none;
+    background-color: var(--button-color);
+    color: white;
+   
+}
+
+input[type=submit]:hover{
+    filter: brightness(110%);
+}
+
+input[type=submit]:active{
+    transform: translateY(4px);
+}
