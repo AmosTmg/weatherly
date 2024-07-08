@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weatherly</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+    <div class="main__container" id="main-container">
+        <div class="main__header" id="main-header">
+            <p>Weatherly</p>
+        </div>
+        <div class="main__text" id="main-text">
+            <p>Welcome to weatherly, please enter an address to know your weatherly</p>
+        </div>
+        <div class="main__input" id="main-input">
+            <form action="/get-weatherly" method="post">
+                <input type="text" id="textInput" placeholder="Enter your address">
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
