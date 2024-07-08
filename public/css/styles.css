@@ -4,7 +4,7 @@
     --main-heading-size : 6rem;
     --second-heading-size : 1.5rem;
     --normal-text-size: 1rem;
-    --gradient-color: #4F00FF, #287BFF, #00F6FF;
+    --gradient: linear-gradient(to top left, #5100ff, #3B3EFF, #287BFF,#00F6FF);
     --gradient-first-color: #4F00FF;
     --gradient-second-color: #287BFF;
     --gradient-third-color: #00F6FF;
@@ -20,10 +20,22 @@
 body{
     box-sizing: border-box;
     height: 90vh;
-    width: auto;
-    background: linear-gradient(var(--gradient-color));
+    background: var(--gradient);
+    background-size: 200% 200%;
+    animation: bg-animation 10000ms ease-out infinite ;
 }
 
+@keyframes bg-animation{
+    0% {
+        background-position: 100% 100%;
+    }
+    50% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
 
 .main__container{
     margin: 5rem;
@@ -89,7 +101,7 @@ input[type=submit]{
     border-style: none;
     background-color: var(--button-color);
     color: white;
-   
+    transition: transform 500ms;
 }
 
 input[type=submit]:hover{
