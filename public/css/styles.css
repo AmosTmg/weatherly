@@ -19,8 +19,8 @@
 
 body{
     box-sizing: border-box;
-    height: 100vh;
-    width: 100vw;
+    height: 90vh;
+    width: auto;
     background: linear-gradient(var(--gradient-color));
 }
 
@@ -30,12 +30,24 @@ body{
     text-align: center;
 }
 
+.main__header{
+    position: relative;
+}
 .main__header p{
     font-size: var(--main-heading-size);
     font-family: "angkor", serif;
     color: white;
 }
 
+.main__header .main__image img{
+    z-index: -1;
+    position: absolute;
+    top: -90px;
+    right: 290px;
+
+    height: 200px;
+    width: 200px;
+}
 
 .main__text p{
     font-size: var(--second-heading-size);
