@@ -10,4 +10,8 @@ app.get("/", (req, res)=>{
     res.render("index.ejs");
 });
 
+app.post("/get-weatherly",(req, res)=>{
+    res.render("main.ejs");
+})
+
 app.listen(`${process.env.port}`, console.log(`Server is running on port ${process.env.port}`));

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weatherly</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/views.js" defer></script>
+    <title>weatherly</title>
 </head>
 <body>
     <div class="main__container" id="main-container">
@@ -20,10 +21,19 @@
         <div class="main__input" id="main-input">
                 <form action="/get-weatherly" method="post">
                     <div class="text__wrapper">
-                        <input type="text" id="textInput" placeholder="Enter your address">
+                        <input type="text" id="textInput" placeholder="Enter your address" name="address" data-search>
                     </div>
                         <input type="submit">
                 </form>
+                <!-- main suggestive search bar -->
+                <div class="suggestion__wrapper" data-cards-container>
+                </div>
+                <template data-user-template>
+                    <div class="suggestion__card" id="suggestion-card" data-card-info>
+                        <P>
+                        </P>
+                    </div>
+                </template>
         </div>
     </div>
 </body>
