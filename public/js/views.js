@@ -4,9 +4,12 @@ const searchInput = document.querySelector("[data-search]");
 const inputField = document.getElementById("textInput");
 
 let timeoutId;
-
 searchInput.addEventListener("input", (e)=>{
     var value = e.target.value;
+
+    if(value === ''){
+        userCardsContainer.innerHTML = '';
+    }
 
     clearTimeout(timeoutId);
 
@@ -30,9 +33,8 @@ searchInput.addEventListener("input", (e)=>{
                     userCardsContainer.append(cardClone);
                 });
             })
-            .catch(error=>console.log("error fetching data ", error));       
-    }, 1000);
-    
+            .catch(error=>console.log("error fetching data ", error));    
+    }, 5000);
 });
 
 

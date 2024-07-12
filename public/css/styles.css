@@ -130,7 +130,7 @@ input[type=submit]:active{
     color: rgba(0, 0, 0,0.6);
     font-size: var(--normal-text-size);
     border-radius: 5px;
-    background-color: rgba(255, 255, 255,0.5);
+    background-color: rgba(255, 255, 255);
 }
 
 .suggestion__card p{
