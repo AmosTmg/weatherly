@@ -1,3 +1,14 @@
+// client.js (or your frontend JavaScript file)
+let apiKey;
+fetch('/api/key')
+    .then(response => response.json())
+    .then(data => {
+        apiKey = data.apiKey;
+        // Now you can use apiKey securely in your frontend code
+        console.log('Received API key from server:');
+    })
+    .catch(error => console.error('Error fetching API key:', error));
+
 const userCardsContainer = document.querySelector("[data-cards-container]");
 const userCardTemplate = document.querySelector("[data-user-template]");
 const searchInput = document.querySelector("[data-search]");
@@ -15,7 +26,7 @@ searchInput.addEventListener("input", (e)=>{
 
     timeoutId = setTimeout(() => {
         // if(value.endsWith(" ")){
-            fetch(`https://geocode.maps.co/search?q=${value}&api_key=668d793f9191c753804907rmf801a17`)
+            fetch(`https://geocode.maps.co/search?q=${value}&api_key=${apiKey}`)
             .then(res=>res.json())
             .then(locations=>{      
                 locations.forEach(location=>{
