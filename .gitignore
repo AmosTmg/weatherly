@@ -4,6 +4,7 @@ node_modules/
 #environment variables
 .env
 
-#json file
+#json files
 format_weather.json
-format.json
+
+
