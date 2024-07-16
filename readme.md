@@ -5,6 +5,10 @@ Weatherly is a simple weather app built using html, css, node.js, express and ej
 ## Features
 weatherly has a suggestive search bar for addresses, which are fetched using the [geocode](https://geocode.maps.co/) API and can be adjust in the view.js file.
 
+## Screenshots
+![example_image](public/screenshot/screenshot_1.png)
+![example_image](public/screenshot/screenshot_2.png)
+
 ## Installation
 
 install node and type the command to install the dependencies.
