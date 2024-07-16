@@ -4,7 +4,7 @@
     --main-heading-size : 6rem;
     --second-heading-size : 1.5rem;
     --normal-text-size: 1rem;
-    --gradient: linear-gradient(to top left, #5100ff, #3B3EFF, #287BFF,#00F6FF);
+    --gradient: linear-gradient(to top left, #5100ff, #3B3EFF, #287BFF,#0AD7FF,#00F6FF);
     --gradient-first-color: #4F00FF;
     --gradient-second-color: #287BFF;
     --gradient-third-color: #00F6FF;
@@ -22,7 +22,7 @@ body{
     height: 90vh;
     background: var(--gradient);
     background-size: 200% 200%;
-    animation: bg-animation 10000ms ease-out infinite ;
+    animation: bg-animation 9000ms ease-out infinite ;
 }
 
 @keyframes bg-animation{
@@ -40,23 +40,21 @@ body{
 .main__container{
     margin: 5rem;
     text-align: center;
+
 }
 
-.main__header{
-    position: relative;
-}
+
 .main__header p{
     font-size: var(--main-heading-size);
     font-family: "angkor", serif;
     color: white;
 }
 
-.main__header .main__image img{
+.main__header img{
     z-index: -1;
     position: absolute;
-    top: -90px;
-    right: 290px;
-
+    top: -20px;
+    right: 400px;
     height: 200px;
     width: 200px;
 }
@@ -139,4 +137,21 @@ input[type=submit]:active{
 
 .hide{
     display: none;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 90vw;
+}
+
+.footer__container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__container a{
+    color: rgb(255, 255, 255, .7);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }

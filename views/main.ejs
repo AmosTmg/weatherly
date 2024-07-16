@@ -10,24 +10,62 @@
     <div class="main__container" id="main-container">
         <div class="main__weather" id="main-weather">
             <div class="weather__icon" id="weather-icon">
-
+                <img src="<%=c_icon_src %>" alt="currrent weather image">
             </div>
             <div class="weather__temp" id="weather-temp">
+                <%= c_temp %><span>°C</span>
+            </div>
+            <div class="current__dayAddress">
+                <div class="dayAndTime">
+                    <% 
+                        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        const dayName = days[c_day];
+                    %>
 
+                    <%= dayName %>, <%= c_hours %>:<%= c_minutes %>
+                </div>
+                <div class="address">
+                    <%= c_name %>
+                </div>
             </div>
         </div>
         <div class="weather__data" id="weather-data">
             <div class="current__weather" id="current-weather">
-
+                <div class="current__weather-data">
+                    <%= c_weatherDes %>
+                </div>
+                <div class="current__weather-feels">
+                    Feels Like <%= c_feelsLike %><span>°C</span>
+                </div>
             </div>
             <div class="current__weather_info" id="current-weather-info">
-
+                Expect <%= c_weatherDes %>. The high will reach <%= c_tempMax %><span>°C on this day.
             </div>
         </div>
         <div class="extra__weather_data" id="extra-weather-data">
             <div class="humidity__tab">
-
+                <div>Humidity</div>
+                <div><%= c_humidity %><span>%</span></div>
             </div>
+            <div class="pressure__tab">
+                <div>pressure</div>
+                <div><%= c_pressure %></div>
+            </div>
+            <div class="uvi__tab">
+                <div>max temp</div>
+                <div><%= c_tempMax %><span>°C</span></div>
+            </div>
+            <div class="pressure">
+                <div>min temp</div>
+                <div><%= c_tempMin %><span>°C</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer__container">
+            <a href="https://x.com/AmosTmg213">connect</a>
+            <a href="https://github.com/AmosTmg">contribute</a>
+            <a href="https://www.linkedin.com/in/amostmg/">linkedIn</a>
         </div>
     </div>
 </body>

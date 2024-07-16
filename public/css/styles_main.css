@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 :root{
     --main-heading-size : 6rem;
     --second-heading-size : 1.5rem;
@@ -16,10 +18,11 @@
 
 body{
     box-sizing: border-box;
-    height: 90vh;
+    height: 80vh;
     background: var(--gradient);
     background-size: 200% 200%;
     animation: bg-animation 10000ms ease-out infinite ;
+    font-family: "inter", sans-serif;
 }
 
 @keyframes bg-animation{
@@ -32,4 +35,106 @@ body{
     100% {
         background-position: 100% 100%;
     }
+}
+
+.main__container{
+    margin-inline: 7rem;
+}
+
+.main__weather{
+    display: flex;
+    margin-top: 8rem;
+    margin-left: 127px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.weather__icon img{
+    height: 174px;
+    width: 200px;
+}
+
+.weather__temp{
+    height: 154px;
+    width: 223px;
+    align-self: flex-end;
+    font-size: 64px;
+    color: white;
+    line-height: 154px;
+}
+
+.weather__data{
+    height: 93px;
+    width: 961px;
+    margin-left: 127px;
+    margin-bottom: 2rem;
+    display: flex;
+    text-align: center;
+    color: white;
+    gap: 1rem;
+}
+
+.weather__data .current__weather{
+    height: 93px;
+    width: 236px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.current__weather .current__weather-data{
+    font-weight: bolder;
+}
+
+
+.weather__data .current__weather_info{
+    font-size: 20px;  
+}
+
+.extra__weather_data{
+    display: flex;
+    gap: 5rem;
+    margin-left: 127px;
+    font-size: 24px;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+.extra__weather_data > *{
+    height: 97px;
+    width: 111px;
+}
+
+.current__dayAddress{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30rem;
+    height: 152px;
+    width: 348px;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+}
+
+.extra__weather_data .uvi__tab{
+    font-size : 23px;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 98vw;
+}
+
+.footer__container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__container a{
+    color: rgb(255, 255, 255, .7);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }

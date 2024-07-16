@@ -5,7 +5,6 @@ fetch('/api/key')
     .then(data => {
         apiKey = data.apiKey;
         // Now you can use apiKey securely in your frontend code
-        console.log('Received API key from server:');
     })
     .catch(error => console.error('Error fetching API key:', error));
 
@@ -45,7 +44,7 @@ searchInput.addEventListener("input", (e)=>{
                 });
             })
             .catch(error=>console.log("error fetching data ", error));    
-    }, 5000);
+    }, 1000);
 });
 
 
