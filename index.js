@@ -24,34 +24,34 @@ app.post("/get-weatherly", async(req, res)=>{
     try{
         // formatting the address suitable for forwarding this to the api , for eg: spaces with + and removing , 
         const address = req.body.address;
-        let arr_address = address.split("");
-        for(let i = 0; i<arr_address.length; i++){
-            if(arr_address[i] === " "){
-              arr_address[i]="+";
-            }
-            else if(arr_address[i] === ","){
-              arr_address[i] = "";
-            }
-          }
+        // let arr_address = address.split("");
+        // for(let i = 0; i<arr_address.length; i++){
+        //     if(arr_address[i] === " "){
+        //       arr_address[i]="+";
+        //     }
+        //     else if(arr_address[i] === ","){
+        //       arr_address[i] = "";
+        //     }
+        //   }
         
-        let new_address = arr_address.join("");
+        // let new_address = arr_address.join("");
 
-        const geo_data = await axios.get(`https://geocode.maps.co/search?q=${new_address}&api_key=${process.env.GEOCODING_API_KEYS}`);
-        const lat = geo_data.data[0].lat;
-        const lon = geo_data.data[0].lon;
-        console.log("latitude and longitude", lat +" "+lon)
+        // const geo_data = await axios.get(`https://geocode.maps.co/search?q=${new_address}&api_key=${process.env.GEOCODING_API_KEYS}`);
+        // const lat = geo_data.data[0].lat;
+        // const lon = geo_data.data[0].lon;
+        // console.log("latitude and longitude", lat +" "+lon)
 
-        const weather_data = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.OPEN_WEATHER_API_KEYS}`);
+        const weather_data = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${address}&units=metric&appid=${process.env.OPEN_WEATHER_API_KEYS}`);
 
-        const temp = weather_data.data.list[1].main.temp;
-        const feelsLike = weather_data.data.list[1].main.feels_like;
-        const iconID = weather_data.data.list[1].weather[0].icon;
-        const weatherDes = weather_data.data.list[1].weather[0].description;
-        const humidity = weather_data.data.list[1].main.humidity;
-        const pressure = weather_data.data.list[1].main.pressure;
-        const name = weather_data.data.city.name;
-        const tempMax = weather_data.data.list[1].main.temp_max;
-        const tempMin = weather_data.data.list[1].main.temp_min;
+        const temp = weather_data.data.main.temp;
+        const feelsLike = weather_data.data.main.feels_like;
+        const iconID = weather_data.data.weather[0].icon;
+        const weatherDes = weather_data.data.weather[0].description;
+        const humidity = weather_data.data.main.humidity;
+        const pressure = weather_data.data.main.pressure;
+        const name = weather_data.data.name;
+        const tempMax = weather_data.data.main.temp_max;
+        const tempMin = weather_data.data.main.temp_min;
         
 
         // console.log(weatherDes)
